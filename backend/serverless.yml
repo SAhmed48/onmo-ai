@@ -1,0 +1,21 @@
+service: campaign-mvp
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-west-1
+  environment:
+    OPENAI_API_KEY: ${env:OPENAI_API_KEY}
+
+functions:
+  app:
+    handler: handler.handler
+    timeout: 29
+    events:
+      - http:
+          path: /{proxy+}
+          method: any
+          cors: true
+
+plugins:
+  - serverless-offline
