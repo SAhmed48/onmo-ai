@@ -10,7 +10,7 @@ Omno AI is a full-stack application for campaign management, featuring user auth
 ### 1. Clone the Repository
 ```bash
 git clone <repo-url>
-cd Onmo-AI
+cd onmo-ai
 ```
 
 ### 2. Setup the Backend
